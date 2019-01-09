@@ -1,17 +1,15 @@
 import React from 'react';
 import VideoListEntry from './VideoListEntry';
 
-const VideoList = () => (
+const VideoList = ({videos, handleVideoListEntryTitleClick}) => (
   <div className="video-list media">
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
+    {videos.map((video) =>
+      <VideoListEntry
+        key={video.etag}
+        video={video}
+        handleVideoListEntryTitleClick={handleVideoListEntryTitleClick}
+      />
+    )}
   </div>
 );
 
