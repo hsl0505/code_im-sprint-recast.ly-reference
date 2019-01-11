@@ -1,0 +1,1 @@
+export const YOUTUBE_API_KEY = '이 파일을 커밋하면 패스워드가 노출되는 것과 마찬가지입니다';

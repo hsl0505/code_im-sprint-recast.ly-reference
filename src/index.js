@@ -3,12 +3,9 @@ import ReactDOM from 'react-dom';
 
 import App from './components/App';
 import { YOUTUBE_API_KEY } from '../config/youtube.example';
-
-const title = 'hello world';
-console.log(App);
-console.log(YOUTUBE_API_KEY);
+import { searchYouTube } from './searchYouTube';
 
 ReactDOM.render(
-  <div>{title}</div>,
+  <App API_KEY={YOUTUBE_API_KEY} searchYouTube={searchYouTube} />,
   document.getElementById('app')
 );
